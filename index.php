@@ -201,7 +201,7 @@
                         <div class="card h-100 text-center">
                             <div class="card-body">
                                 <img src="image/video-edit.png" style="margin: 0 0 30px 0;" width="100px" alt="...">
-                                <p class="card-text">Video Editing</p>
+                                <p class="card-text"> Video Editing</p>
                             </div>
                         </div>
                     </div>
