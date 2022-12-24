@@ -1,0 +1,97 @@
+body {
+    font-family: 'Poppins', sans-serif;
+}
+
+    .cont {
+        ul {
+            li {
+                a {
+                    transition: 0.3s;
+        
+                    &:hover {
+                        opacity: 50%;
+                        border-bottom: 2px solid #ffffff;
+                        padding: 10px 0;
+                    }
+                }
+            }
+        }
+    }
+
+
+.divider {
+    background-color: #D9D9D9;
+}
+
+.typewriter {
+    width: 320px;
+    p {
+        color: #000000;
+        overflow: hidden; /* Ensures the content is not revealed until the animation */
+        border-right: 1px solid black; /* The typwriter cursor */
+        white-space: nowrap; /* Keeps the content on a single line */
+        margin: 0 0; /* Gives that scrolling effect as the typing happens */
+        animation: 
+            typing 3.5s steps(30, start),
+            blink-caret .5s step-end infinite;
+    }
+
+    /* The typing effect */
+    @keyframes typing {
+        from { width: 0 }
+        to { width: 100% }
+    }
+    
+    /* The typewriter cursor effect */
+    @keyframes blink-caret {
+        from, to { border-color: transparent }
+        50% { border-color: #000000 }
+    }
+}
+
+.home, .about, .skills, .projects, .blogs, .contact {
+    height: 100vh;
+    width: 100%;
+}
+
+.about {
+    background: url("../image/TB1.png") no-repeat bottom left;
+    background-size: 50% 70%;
+}
+
+.skills {
+    background: url("../image/TB2.png") no-repeat top left;
+    background-size: 50% 70%;
+}
+
+.projects {
+    background: url("../image/TB3.png") no-repeat bottom right;
+    background-size: 50% 70%;
+}
+
+.blogs {
+    background: url("../image/TB4.png") no-repeat top right;
+    background-size: 50% 70%;
+}
+
+footer {
+    height: 100px;
+    width: 100%;
+}
+
+// X-Small devices (portrait phones, less than 576px)
+@media (max-width: 575.98px) { 
+
+ }
+
+// Small devices (landscape phones, less than 768px)
+@media (max-width: 767.98px) {  }
+
+// Medium devices (tablets, less than 992px)
+@media (max-width: 991.98px) {  }
+
+// Large devices (desktops, less than 1200px)
+@media (max-width: 1199.98px) {
+
+}
+
