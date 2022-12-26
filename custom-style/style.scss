@@ -85,13 +85,42 @@ footer {
  }
 
 // Small devices (landscape phones, less than 768px)
-@media (max-width: 767.98px) {  }
+@media (max-width: 767.98px) {
+    header {
+        .navi {
+            .cont {
+                .nav-1 {
+                    display: none;
+                }
+            }
+        }
+    }
+}
 
 // Medium devices (tablets, less than 992px)
-@media (max-width: 991.98px) {  }
+@media (max-width: 992.98px) {
+    .head-name {
+        font-size: 1.5rem;
+    }
+}
 
 // Large devices (desktops, less than 1200px)
 @media (max-width: 1199.98px) {
+    .head-name {
+        font-size: 1.5rem;
+    }
+}
 
+// X-Large devices (large desktops, less than 1400px)
+@media (max-width: 1399.98px) { 
+    .cont {
+        ul {
+            li {
+                a {
+                    font-size: .8rem;
+                }
+            }
+        }
+    }
 }
 

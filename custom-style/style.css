@@ -90,4 +90,25 @@ body {
 footer {
   height: 100px;
   width: 100%;
+}
+
+@media (max-width: 767.98px) {
+  header .navi .cont .nav-1 {
+    display: none;
+  }
+}
+@media (max-width: 992.98px) {
+  .head-name {
+    font-size: 1.5rem;
+  }
+}
+@media (max-width: 1199.98px) {
+  .head-name {
+    font-size: 1.5rem;
+  }
+}
+@media (max-width: 1399.98px) {
+  .cont ul li a {
+    font-size: 0.8rem;
+  }
 }/*# sourceMappingURL=style.css.map */
