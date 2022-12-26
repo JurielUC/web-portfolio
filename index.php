@@ -5,6 +5,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>My Website</title>
+    <link rel="shortcut icon" href="image/tab-img.png" type="image/x-icon">
     <link rel="stylesheet" href="node_modules/bootstrap/dist/css/bootstrap.css">
     <link rel="stylesheet" href="custom-style/style.css?v=<?php echo time(); ?>">
     <script defer src="node_modules/bootstrap/dist/js/bootstrap.bundle.js"></script>
@@ -427,7 +428,7 @@
         </section>
     </main>
     <footer class="bg-dark text-light d-flex justify-content-center align-items-center">
-        <p>© Juriel Comia. All Rights Reserved</p>
+        <p>© <a href="login.php" class=" text-decoration-none text-light">Juriel Comia</a>. All Rights Reserved</p>
     </footer>
 </body>
 </html>
