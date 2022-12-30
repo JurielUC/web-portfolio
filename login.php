@@ -11,6 +11,8 @@
     <script defer src="node_modules/bootstrap/dist/js/bootstrap.bundle.js"></script>
     <script defer src="js/active-nav.js"></script>
     <script defer src="js/fade-in.js"></script>
+    <script defer src="js/show-pass.js"></script>
+    <script defer src="js/disable-back.js"></script>
     <link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" 
         href="https://fonts.gstatic.com" crossorigin
     >
@@ -31,27 +33,35 @@
     </header>
     <div class="container-fluid divider" style="height: 15px"></div>
     <main>
-        <section>
-            <div class="container d-flex justify-content-center align-items-center" style="height: 90vh;">
-                <div class="card h-75 w-50 border">
+        <section class="login-sec">
+            <div class="container d-flex justify-content-center align-items-center" style="height: 91vh;">
+                <div class="card w-25 border" style="height: 320px">
                     <div class="card-header">
-                        <h4 class="fw-bold"><i class="bi bi-box-arrow-in-right"></i> Login Here</h4>
+                        <h5 class="fw-bold"><i class="bi bi-box-arrow-in-right"></i> Login Here</h5>
                     </div>
                     <div class="card-body h-100 d-flex justify-content-center align-items-center">
-                        <form>
+                        <form action="php/login-con.php" method="POST">
                             <div class="mb-2">
                                 <label for="email" class="form-label"><i class="bi bi-envelope-at"></i> Email</label>
-                                <input type="email" class="form-control" id="email" aria-describedby="emailHelp">
+                                <input type="email" name="email" class="form-control" style="font-size: .8rem" id="email" aria-describedby="emailHelp">
                             </div>
                             <div class="mb-2">
-                                <label for="password" class="form-label"><i class="bi bi-person"></i> Password</label>
+                                <label for="password" class="form-label"><i class="bi bi-lock"></i> Password</label>
                                 <div class="input-group">
-                                    <input type="password" style="width: 85%;" class="form-control" id="password">
-                                    <input type="checkbox" style="width: 15%;" class="form-control" name="" id="">
+                                    <input type="password" style="width: 85%; font-size: .8rem;" name="password" class="form-control" id="password" autocomplete="off">
+                                    <span class="input-group-text form-control-sm d-flex justify-content-center align-items-center" style="width: 15%;">
+                                        <i class="bi bi-eye" id="togglePassword" style="cursor: pointer"></i></i>
+                                    </span>
                                 </div>
                             </div>
                             <button type="submit" class="btn btn-dark" style="width: 100%;">Login</button>
                         </form>
+                    </div>
+                    <div class="card-footer">
+                        <p style="font-size: .7rem" class="text-danger text-center"><?php if(!empty($_GET['message'])) {
+                                $message = $_GET['message'];
+                                echo $message; }?>
+                        </p>
                     </div>
                 </div>
             </div>

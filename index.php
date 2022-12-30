@@ -428,7 +428,7 @@
         </section>
     </main>
     <footer class="bg-dark text-light d-flex justify-content-center align-items-center">
-        <p>© <a href="login.php" class=" text-decoration-none text-light">Juriel Comia</a>. All Rights Reserved</p>
+        <p>© <a href="login.php" target="_blank" class=" text-decoration-none text-light">Juriel Comia</a>. All Rights Reserved</p>
     </footer>
 </body>
 </html>
