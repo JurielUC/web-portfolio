@@ -19,7 +19,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
       // Store the user's data in the session and redirect to the dashboard
       $_SESSION['logged_in'] = true;
       $_SESSION['email'] = $username;
-      header('Location: ../dashboard/dashboard.php');
+      header('Location: ../dashboard/blog.php');
       exit;
 
     } else {

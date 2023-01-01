@@ -36,16 +36,32 @@
         </div>
     </header>
     <div class="container-fluid divider" style="height: 15px"></div>
-    <!--<div class="loading-spinner d-flex justify-content-center">
-        <div class="spinner-border text-dark" role="status">
-            <span class="visually-hidden">Loading...</span>
+    <nav style="height: 90vh; width: 280px; margin-top: 1px;" class="border dashboard-navi">
+        <div class="row" style="height: 80px">
+            <div class="col-12 d-flex justify-content-center align-items-center">
+                <h5 class="border-bottom px-5 py-4"><i class="bi bi-menu-app"></i> Dashboard</h5>
+            </div>
         </div>
-    </div>-->
+        <div class="row">
+            <div class="col-12  d-flex justify-content-center align-items-center">
+                <a class="db-navi py-4 text-decoration-none link-dark" href="blog.php"><i class="bi bi-pen"></i> Blogs</a>
+            </div>
+            <div class="col-12  d-flex justify-content-center align-items-center">
+                <a class="db-navi py-4 text-decoration-none link-dark" href="message.php"><i class="bi bi-chat-left"></i> Messages</a>
+            </div>
+            <div class="col-12  d-flex justify-content-center align-items-center">
+                <a class="db-navi py-4 text-decoration-none link-dark" href="#"><i class="bi bi-folder"></i> Projects</a>
+            </div>
+            <div class="col-12  d-flex justify-content-center align-items-center">
+                <a class="db-navi py-4 text-decoration-none link-dark" href="../php/logout.php"><i class="bi bi-box-arrow-left"></i> Logout</a>
+            </div>
+        </div>
+    </nav>
     <div id="loading-animation">
         <img id="loading-image" src="../image/loading.gif" alt="Loading..." />
     </div>
-    <main id="main-content">
-        <section>
+    <main id="main-content" class="dashboard-content">
+        <section id="blogs">
             <?php echo $lgn_fname; ?>
         </section>
     </main>

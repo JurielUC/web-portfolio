@@ -79,6 +79,24 @@ footer {
     width: 100%;
 }
 
+.db-navi {
+    transition: .3s;
+    text-align: center;
+
+    &:hover {
+        width: 75%;
+        border-bottom: 1px solid #000000;
+    }
+}
+
+.dashboard-navi {
+    position: fixed;
+}
+
+.dashboard-content {
+    margin: 0 0 0 300px;
+}
+
 // X-Small devices (portrait phones, less than 576px)
 @media (max-width: 575.98px) { 
 
