@@ -95,8 +95,14 @@ footer {
 .db-navi {
   transition: 0.3s;
   text-align: center;
+  border-bottom: 1px solid #ffffff;
 }
 .db-navi:hover {
+  width: 75%;
+  border-bottom: 1px solid #000000;
+}
+
+.active-navi {
   width: 75%;
   border-bottom: 1px solid #000000;
 }
@@ -106,7 +112,14 @@ footer {
 }
 
 .dashboard-content {
-  margin: 0 0 0 300px;
+  margin: 0 0 0 280px;
+}
+
+a, button {
+  transition: 0.3s;
+}
+a:hover, button:hover {
+  opacity: 75%;
 }
 
 @media (max-width: 767.98px) {

@@ -47,7 +47,7 @@
                 <a class="db-navi py-4 text-decoration-none link-dark" href="blog.php"><i class="bi bi-pen"></i> Blogs</a>
             </div>
             <div class="col-12  d-flex justify-content-center align-items-center">
-                <a class="db-navi py-4 text-decoration-none link-dark" href="#"><i class="bi bi-chat-left"></i> Messages</a>
+                <a class="db-navi py-4 text-decoration-none link-dark active-navi" href="#"><i class="bi bi-chat-left"></i> Messages</a>
             </div>
             <div class="col-12  d-flex justify-content-center align-items-center">
                 <a class="db-navi py-4 text-decoration-none link-dark" href="project.php"><i class="bi bi-folder"></i> Projects</a>
@@ -61,9 +61,11 @@
         <img id="loading-image" src="../image/loading.gif" alt="Loading..." />
     </div>
     <main id="main-content" class="dashboard-content">
-        <section id="blogs">
-            <?php echo $lgn_fname; ?>
-        </section>
+        <div class="container h-100 border bg-dark">
+            <section id="blogs">
+                <?php echo $lgn_fname; ?>
+            </section>
+        </div>
     </main>
 </body>
 </html>

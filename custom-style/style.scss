@@ -82,6 +82,7 @@ footer {
 .db-navi {
     transition: .3s;
     text-align: center;
+    border-bottom: 1px solid #ffffff;
 
     &:hover {
         width: 75%;
@@ -89,12 +90,25 @@ footer {
     }
 }
 
+.active-navi {
+    width: 75%;
+    border-bottom: 1px solid #000000;
+}
+
 .dashboard-navi {
     position: fixed;
 }
 
 .dashboard-content {
-    margin: 0 0 0 300px;
+    margin: 0 0 0 280px;
+}
+
+a, button {
+    transition: 0.3s;
+
+    &:hover {
+        opacity: 75%;
+    }
 }
 
 // X-Small devices (portrait phones, less than 576px)
