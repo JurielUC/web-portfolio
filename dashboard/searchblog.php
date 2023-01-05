@@ -45,7 +45,7 @@
         </div>
         <div class="row">
             <div class="col-12  d-flex justify-content-center align-items-center">
-                <a class="db-navi py-4 text-decoration-none link-dark active-navi" href="#"><i class="bi bi-pen"></i> Blogs</a>
+                <a class="db-navi py-4 text-decoration-none link-dark active-navi" href="blog.php"><i class="bi bi-pen"></i> Blogs</a>
             </div>
             <div class="col-12  d-flex justify-content-center align-items-center">
                 <a class="db-navi py-4 text-decoration-none link-dark" href="message.php"><i class="bi bi-chat-left"></i> Messages</a>
@@ -138,7 +138,7 @@
                                     {
                                 ?>
                                 <div class="card card-body mb-1">
-                                    <a class="text-dark" href="viewblog.php?blog_id=<?php echo $artrow['blog_id']; ?>"><?php echo $artrow['title']; ?></a>
+                                    <a class="text-dark" href=""><?php echo $artrow['title']; ?></a>
                                 </div>
                                 <?php 
                                     }
@@ -160,7 +160,7 @@
                                     {
                                 ?>
                                 <div class="card card-body mb-1">
-                                    <a class="text-dark" href="viewblog.php?blog_id=<?php echo $dbrow['blog_id']; ?>"><?php echo $dbrow['title']; ?></a>
+                                    <a class="text-dark" href=""><?php echo $dbrow['title']; ?></a>
                                 </div>
                                 <?php 
                                     }
@@ -182,7 +182,7 @@
                                     {
                                 ?>
                                 <div class="card card-body mb-1">
-                                    <a class="text-dark" href="viewblog.php?blog_id=<?php echo $itrow['blog_id']; ?>"><?php echo $itrrow['title']; ?></a>
+                                    <a class="text-dark" href=""><?php echo $itrrow['title']; ?></a>
                                 </div>
                                 <?php 
                                     }
@@ -204,7 +204,7 @@
                                     {
                                 ?>
                                 <div class="card card-body mb-1">
-                                    <a class="text-dark" href="viewblog.php?blog_id=<?php echo $mtrow['blog_id']; ?>"><?php echo $mtvrow['title']; ?></a>
+                                    <a class="text-dark" href=""><?php echo $mtvrow['title']; ?></a>
                                 </div>
                                 <?php 
                                     }
@@ -226,7 +226,7 @@
                                     {
                                 ?>
                                 <div class="card card-body mb-1">
-                                    <a class="text-dark" href="viewblog.php?blog_id=<?php echo $prgrow['blog_id']; ?>"><?php echo $prgrow['title']; ?></a>
+                                    <a class="text-dark" href=""><?php echo $prgrow['title']; ?></a>
                                 </div>
                                 <?php 
                                     }
@@ -248,7 +248,7 @@
                                     {
                                 ?>
                                 <div class="card card-body mb-1">
-                                    <a class="text-dark" href="viewblog.php?blog_id=<?php echo $qtsrow['blog_id']; ?>"><?php echo $qtsrow['title']; ?></a>
+                                    <a class="text-dark" href=""><?php echo $qtsrow['title']; ?></a>
                                 </div>
                                 <?php 
                                     }
@@ -264,22 +264,8 @@
 
                 <!--Search Bar-->
                 <div class="row">
-                    <div class="col-6 d-flex justify-content-start align-items-center">
-                        <!--Total number of blogs posted-->
-                        <?php
-                             $counts = "SELECT COUNT(id) AS total_blogs FROM tb_blogs";
-                             $res_count = mysqli_query($conn, $counts);
-
-                             while($row_count = mysqli_fetch_assoc($res_count))
-                             {
-                        ?>
-                        <p class="my-auto">Total Blogs Posted: <b><?php echo $row_count['total_blogs']; ?></b></p>
-                        <?php
-                             }
-                        ?>
-                    </div>
-                    <div class="col-6 g-2 d-flex justify-content-end align-items-center">
-                        <form action="searchblog.php" method="post">
+                    <div class="col-12 g-2 d-flex justify-content-end align-items-center">
+                        <form action="" method="post">
                             <div class="input-group">
                                 <input type="text" class="form-control" style="width: 85%" name="valueToSearch" id="" placeholder="Search...">
                                 <button class="form-control" style="width: 15%" name="search"  title="Search"><i class="bi bi-search"></i></button>
@@ -295,9 +281,38 @@
                     
                     <!--Select all from tb_blogs to display-->
                     <?php 
-                        require_once '../php/select-all-blogs.php';
 
-                        while ($row = mysqli_fetch_assoc($result))
+                        if(isset($_POST['search']))
+                        {
+                            $valueToSearch = $_POST['valueToSearch'];
+                            // search in all table columns
+                            // using concat mysql function
+                            $query = "SELECT * FROM tb_blogs WHERE CONCAT(`blog_id`, `title`, `blog`) LIKE '%".$valueToSearch."%'";
+                            $search_result = filterTable($query);
+                            
+                        }
+                        else {
+                            $query = "SELECT * FROM tb_blogs";
+                            $search_result = filterTable($query);
+                        }
+
+                        // function to connect and execute the query
+                        function filterTable($query)
+                        {
+                            include '../php/dbconnect.php';
+                            $filter_Result = mysqli_query($conn, $query);
+                            return $filter_Result;
+                        }
+                        
+                            if (mysqli_num_rows($search_result) == 0) {
+                            echo "<div class='nodata' style='width: 100%; height: 60vh; display: flex; justify-content: center; align-items: center; flex-direction: column; text-align: center; opacity: 25%;'>
+                                <h1 style='font-size: 5rem;'><i class='bi bi-database-x'></i></h1>
+                                <p>No result</p>
+                                </div>";
+                            }
+
+
+                        while ($row = mysqli_fetch_assoc($search_result))
                         {
                             $category=$row['category'];
                             $title=$row['title'];
