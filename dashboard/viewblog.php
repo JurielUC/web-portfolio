@@ -93,6 +93,7 @@
                                     <label for="blog" class="col-form-label">Blog:</label>
                                     <textarea name="blog" class="form-control" rows="8" id="blog" required><?php echo $blog; ?></textarea>
                                 </div>
+                                <input type="hidden" name="blog_id" value="<?php echo $row['blog_id'] ?>">
                             </form>
                         </div>
                         <div class="modal-footer">
@@ -103,11 +104,9 @@
                     </div>
                 </div>
             </section>
-
             <!--Second Section to display blogs-->
             <section id="blogs" class="mt-2 overflow-auto d-flex justify-content-center" style="height: 74vh;">
                 <div class="row g-1" style="width: 50%">
-
                     <div class="col-12">
                         <div class="card">
                             <div class="card-header fw-bold d-flex justify-content-between" style="font-size: 1rem;">
