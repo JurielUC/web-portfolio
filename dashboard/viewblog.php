@@ -68,7 +68,7 @@
                     <div class="modal-dialog modal-lg modal-dialog-centered">
                         <div class="modal-content">
                         <div class="modal-header">
-                            <h1 class="modal-title fs-5" id="exampleModalLabel"><i class="bi bi-pencil-square"></i> Write a Blog</h1>
+                            <h1 class="modal-title fs-5" id="exampleModalLabel"><i class="bi bi-pencil-square"></i> Edit a Blog</h1>
                             <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                         </div>
                         <div class="modal-body">
@@ -103,6 +103,22 @@
                         </div>
                     </div>
                 </div>
+
+                <!-- Modal for Delete-->
+                <div class="modal fade" id="deleteMe" tabindex="-1" aria-labelledby="deleteMeLabel" aria-hidden="true">
+                    <div class="modal-dialog modal-dialog-centered">
+                        <div class="modal-content">
+                        <div class="modal-body">
+                            <h1 class="modal-title fs-4" id="deleteMeLabel"><i class="bi bi-exclamation-triangle-fill"></i> Delete Blog</h1>
+                            Do you really want to delete this blog? This cannot be undone. 
+                        </div>
+                        <div class="modal-footer">
+                            <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                            <button type="button" onclick="window.location.href='../php/delete-blog.php?blog_id=<?php echo $row['blog_id'] ?>'" class="btn btn-danger">Delete</button>
+                        </div>
+                        </div>
+                    </div>
+                </div>
             </section>
             <!--Second Section to display blogs-->
             <section id="blogs" class="mt-2 overflow-auto d-flex justify-content-center" style="height: 74vh;">
@@ -113,7 +129,7 @@
                                 <?php echo $category; ?>
                                 <div>
                                     <a href="" class="p-1 text-decoration-none text-dark" data-bs-toggle="modal" data-bs-target="#publisher"><i class="bi bi-pencil-square"></i> Edit</a>
-                                    <a href="" class="p-1 text-decoration-none text-danger" data-bs-toggle="modal" data-bs-target="#publisher"><i class="bi bi-trash"></i> Delete</a>
+                                    <a href="" class="p-1 text-decoration-none text-danger" data-bs-toggle="modal" data-bs-target="#deleteMe"><i class="bi bi-trash"></i> Delete</a>
                                 </div>
                                 
                             </div>
