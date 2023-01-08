@@ -38,7 +38,6 @@
     </div>
     <main id="main-content" style="height: 87vh;">
         <div class="container h-100">
-            <!--Second Section to display blogs-->
             <section id="blogs" class="mt-2 d-flex justify-content-center align-items-center" style="height: 74vh;">
                 <div class="row g-1">
                     <div class="col-12 text-center">

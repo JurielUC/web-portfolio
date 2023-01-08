@@ -283,7 +283,7 @@
                                 <h3 class="card-title fw-bold"><i class="bi bi-pen-fill"></i> Blogs</h3>
                             </div>
                             <div class="card-footer text-muted" style="font-size: 1vw;">
-                                Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+                                Here I write blogs and step-by-step coding tutorials.
                             </div>
                         </div>
                     </div>
@@ -498,8 +498,22 @@
             }
         ?>
     </main>
-    <footer class="bg-dark text-light d-flex justify-content-center align-items-center">
-        <p>© <a href="login.php" target="_blank" class=" text-decoration-none text-light">Juriel Comia</a>. All Rights Reserved</p>
+    <footer>
+        <div class="bg-dark text-light d-flex h-100 justify-content-center align-items-center">
+            <p>© <a href="login.php" target="_blank" class=" text-decoration-none text-light">Juriel Comia</a>. All Rights Reserved</p>
+        </div>
     </footer>
+    <div class="not-pc" style="height: 90vh; width: 100%;">
+        <div class="mt-2 d-flex justify-content-center align-items-center w-100" style="height: 80vh;">
+            <div class="row g-1">
+                <div class="col-12 text-center">
+                    <img src="image/under-construction.gif" alt="" width="50%">
+                    <p class="headings-1 fw-bold">Sorry, this is not available on mobile</p>
+                    <p style="font-size: .8rem;">Working on it! For now try it on your laptop or pc.</p>
+                    <p style="font-size: .8rem;">Thank you for understanding.</p>
+                </div>
+            </div>
+        </div>
+    </div>
 </body>
 </html>

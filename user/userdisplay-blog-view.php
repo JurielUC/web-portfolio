@@ -65,7 +65,7 @@
             </section>
             <!--Second Section to display blogs-->
             <section id="blogs" class="mt-2 d-flex justify-content-center" style="height: 74vh;">
-                <div class="row g-1" style="width: 50%">
+                <div class="row g-1" style="width: 100%">
                     <div class="col-12">
                         <div class="card">
                             <div class="card-header fw-bold d-flex justify-content-between" style="font-size: 1rem;">
