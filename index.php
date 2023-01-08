@@ -22,6 +22,7 @@
     <link rel="stylesheet" href="icons/node_modules/bootstrap-icons/font/bootstrap-icons.css">
 </head>
 <style>
+    /* For Navbar Animation */
     .navi .cont ul li.active-two a {
         opacity: 50%;
         border-bottom: 2px solid #ffffff;
@@ -29,6 +30,7 @@
         transition: 0.3s;
     }
 
+    /* For animation transition */
     .reveal {
         position: relative;
         transform: translateY(150px);
@@ -292,7 +294,7 @@
                             <?php 
                                 include_once 'php/dbconnect.php';
 
-                                $query = "SELECT * FROM tb_blogs WHERE blog_id = '1525505582'";
+                                $query = "SELECT * FROM tb_blogs WHERE blog_id = '964453033'";
                                 $result = mysqli_query($conn, $query);
 
                                 while ($row = mysqli_fetch_assoc($result))

@@ -12,3 +12,20 @@ Answer: "I stay up-to-date with new technologies and best practices by reading i
 
 "Tell me about a time when you had to troubleshoot a technical issue. How did you approach the problem and what was the outcome?"
 Answer: "One time, I had to troubleshoot an issue with a [specific technology or system]. I approached the problem by first gathering as much information as possible about the issue, including reproducing the problem and reviewing any relevant logs or error messages. I then brainstormed potential solutions and tested them until I was able to identify the root cause of the problem. The outcome was that I was able to resolve the issue and prevent it from occurring again in the future."
+
+
+
+
+TTR101 - Fade-in Animation when Scroll in your Website
+
+This blog shows how to create a fade-in animation when scrolling down the page. It is often used on the website landing page. Here we will use HTML, CSS, and JavaScript.
+
+Here are the steps to use it;
+
+First, in each section or div of your landing page put "reveal" in a class.
+Example: Imagine that you have 3 Sections on your landing page. The first one is "home", next is "product", and lastly "contact us".
+
+Sample code:
+<section id="home"><
+
+Note: You can use any other class name.
