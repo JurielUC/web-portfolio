@@ -94,12 +94,11 @@
                         </div>
                         <div class="card-body">
                             <p style="text-align: justify; line-height: 2;">&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp Hello, and thank you for visiting my online portfolio. I'm 
-                                Juriel, a Web Developer and Graphic Designer from 
+                                Juriel, aspiring Web Developer and Graphic Designer from 
                                 Lemery, Batangas. At Batangas State University - The National 
                                 Engineering University, I'm now pursuing a Bachelor of Science 
                                 in Information Technology with specialization of Service 
-                                Management. My goal is to use my expertise to assist your firm 
-                                to develop.
+                                Management.
                             </p>
                         </div>
                     </div>
@@ -244,7 +243,7 @@
                                 <h3>Photo Editing</h3>
                             </div>
                             <div class="card-footer">
-                                <a href="" class="btn btn-dark w-50" style="font-size: 1vw;"><i class="bi bi-binoculars-fill"></i> View</a>
+                                <a href="user/under-construction.php" class="btn btn-dark w-50" style="font-size: 1vw;"><i class="bi bi-binoculars-fill"></i> View</a>
                             </div>
                         </div>
                     </div>
@@ -255,7 +254,7 @@
                                 <h3>Video Editing</h3>
                             </div>
                             <div class="card-footer">
-                                <a href="" class="btn btn-dark w-50" style="font-size: 1vw;"><i class="bi bi-binoculars-fill"></i> View</a>
+                                <a href="user/under-construction.php" class="btn btn-dark w-50" style="font-size: 1vw;"><i class="bi bi-binoculars-fill"></i> View</a>
                             </div>
                         </div>
                     </div>
@@ -266,7 +265,7 @@
                                 <h3>Web Dev Projects</h3>
                             </div>
                             <div class="card-footer">
-                                <a href="" class="btn btn-dark w-50" style="font-size: 1vw;"><i class="bi bi-binoculars-fill"></i> View</a>
+                                <a href="user/under-construction.php" class="btn btn-dark w-50" style="font-size: 1vw;"><i class="bi bi-binoculars-fill"></i> View</a>
                             </div>
                         </div>
                     </div>
@@ -290,63 +289,127 @@
                 <div class="row">
                     <div class="col-12">
                         <div class="card-group">
+                            <?php 
+                                include_once 'php/dbconnect.php';
+
+                                $query = "SELECT * FROM tb_blogs WHERE blog_id = '1525505582'";
+                                $result = mysqli_query($conn, $query);
+
+                                while ($row = mysqli_fetch_assoc($result))
+                                {
+                                    $category=$row['category'];
+                                    $title=$row['title'];
+                                    $blog=$row['blog'];
+                                    $datetime=$row['datetime'];
+                                    $uni_id=$row['blog_id'];
+
+                                    // strip tags to avoid breaking any html
+                                    $string = strip_tags($blog);
+                                    if (strlen($string) > 130) {
+
+                                        // truncate string
+                                        $stringCut = substr($string, 0, 140);
+                                        $endPoint = strrpos($stringCut, ' ');
+
+                                        //if the string doesn't contain any space then it will cut without word basis.
+                                        $string = $endPoint? substr($stringCut, 0, $endPoint) : substr($stringCut, 0);
+                                        $string .= '...';
+                                    }
+                            ?>
                             <div class="card">
                                 <div class="card-header">
-                                    <h5>Header</h5>
+                                    <h5><?php echo $category ?></h5>
                                 </div>
                                 <div class="card-body" style="text-align: justify;">
-                                    <h4 class="card-title">This is Title</h4>
-                                    <p style="font-size: 1vw;"> Lorem ipsum dolor sit amet, consectetur 
-                                        adipiscing elit, sed do eiusmod tempor 
-                                        incididunt ut labore et dolore magna 
-                                        aliqua. Ut enim ad minim veniam, quis 
-                                        nostrud exercitation ullamco laboris nisi ut 
-                                        aliquip ex ea commodo consequat.
-                                    </p>
-                                    <a style="font-size: 1vw;" href="" class="btn btn-dark"><i class="bi bi-book"></i> Continue Reading...</a>
+                                    <h4 class="card-title"><?php echo $title; ?></h4>
+                                    <p style="font-size: 1vw;"><?php echo $string; ?></p>
+                                    <a style="font-size: 1vw;" href="user/userdisplay-blog-view.php?blog_id=<?php echo $uni_id; ?>" class="btn btn-dark"><i class="bi bi-book"></i> Continue Reading...</a>
                                 </div>
                                 <div class="card-footer text-center">
-                                    <p class="text-muted" style="font-size: 1vw;">2 hours ago</p>
+                                    <p class="text-muted" style="font-size: 1vw;">Date Posted: <?php echo $datetime; ?></p>
                                 </div>
                             </div>
+                            <?php 
+                                }
+
+                                $query2 = "SELECT * FROM tb_blogs WHERE blog_id = '338158280'";
+                                $result2 = mysqli_query($conn, $query2);
+
+                                while ($row2 = mysqli_fetch_assoc($result2)) {
+                                    $category2=$row2['category'];
+                                    $title2=$row2['title'];
+                                    $blog2=$row2['blog'];
+                                    $datetime2=$row2['datetime'];
+                                    $uni_id2=$row2['blog_id'];
+
+                                    // strip tags to avoid breaking any html
+                                    $string2 = strip_tags($blog2);
+                                    if (strlen($string2) > 130) {
+
+                                        // truncate string
+                                        $stringCut2 = substr($string2, 0, 140);
+                                        $endPoint2 = strrpos($stringCut2, ' ');
+
+                                        //if the string doesn't contain any space then it will cut without word basis.
+                                        $string2 = $endPoint2? substr($stringCut2, 0, $endPoint2) : substr($stringCut2, 0);
+                                        $string2 .= '...';
+                                    }
+                            ?>
                             <div class="card">
                                 <div class="card-header">
-                                    <h5>Header</h5>
+                                    <h5><?php echo $category2 ?></h5>
                                 </div>
                                 <div class="card-body" style="text-align: justify;">
-                                    <h4 class="card-title">This is Title</h4>
-                                    <p style="font-size: 1vw;"> Lorem ipsum dolor sit amet, consectetur 
-                                        adipiscing elit, sed do eiusmod tempor 
-                                        incididunt ut labore et dolore magna 
-                                        aliqua. Ut enim ad minim veniam, quis 
-                                        nostrud exercitation ullamco laboris nisi ut 
-                                        aliquip ex ea commodo consequat.
-                                    </p>
-                                    <a style="font-size: 1vw;" href="" class="btn btn-dark"><i class="bi bi-book"></i> Continue Reading...</a>
+                                    <h4 class="card-title"><?php echo $title2; ?></h4>
+                                    <p style="font-size: 1vw;"><?php echo $string2; ?></p>
+                                    <a style="font-size: 1vw;" href="user/userdisplay-blog-view.php?blog_id=<?php echo $uni_id2; ?>" class="btn btn-dark"><i class="bi bi-book"></i> Continue Reading...</a>
                                 </div>
                                 <div class="card-footer text-center">
-                                    <p class="text-muted" style="font-size: 1vw;">2 hours ago</p>
+                                    <p class="text-muted" style="font-size: 1vw;">Date Posted: <?php echo $datetime2; ?></p>
                                 </div>
                             </div>
+                            <?php 
+                                }
+
+                                $query3 = "SELECT * FROM tb_blogs WHERE blog_id = '1029125450'";
+                                $result3 = mysqli_query($conn, $query3);
+
+                                while ($row3 = mysqli_fetch_assoc($result3)) {
+                                    $category3=$row3['category'];
+                                    $title3=$row3['title'];
+                                    $blog3=$row3['blog'];
+                                    $datetime3=$row3['datetime'];
+                                    $uni_id3=$row3['blog_id'];
+
+                                    // strip tags to avoid breaking any html
+                                    $string3 = strip_tags($blog3);
+                                    if (strlen($string3) > 130) {
+
+                                        // truncate string
+                                        $stringCut3 = substr($string3, 0, 140);
+                                        $endPoint3 = strrpos($stringCut3, ' ');
+
+                                        //if the string doesn't contain any space then it will cut without word basis.
+                                        $string3 = $endPoint3? substr($stringCut3, 0, $endPoint3) : substr($stringCut3, 0);
+                                        $string3 .= '...';
+                                    }
+                            ?>
                             <div class="card">
                                 <div class="card-header">
-                                    <h5>Header</h5>
+                                    <h5><?php echo $category3 ?></h5>
                                 </div>
                                 <div class="card-body" style="text-align: justify;">
-                                    <h4 class="card-title">This is Title</h4>
-                                    <p style="font-size: 1vw;"> Lorem ipsum dolor sit amet, consectetur 
-                                        adipiscing elit, sed do eiusmod tempor 
-                                        incididunt ut labore et dolore magna 
-                                        aliqua. Ut enim ad minim veniam, quis 
-                                        nostrud exercitation ullamco laboris nisi ut 
-                                        aliquip ex ea commodo consequat.
-                                    </p>
-                                    <a style="font-size: 1vw;" href="" class="btn btn-dark"><i class="bi bi-book"></i> Continue Reading...</a>
+                                    <h4 class="card-title"><?php echo $title3; ?></h4>
+                                    <p style="font-size: 1vw;"><?php echo $string3; ?></p>
+                                    <a style="font-size: 1vw;" href="user/userdisplay-blog-view.php?blog_id=<?php echo $uni_id3; ?>" class="btn btn-dark"><i class="bi bi-book"></i> Continue Reading...</a>
                                 </div>
                                 <div class="card-footer text-center">
-                                    <p class="text-muted" style="font-size: 1vw;">2 hours ago</p>
+                                    <p class="text-muted" style="font-size: 1vw;">Date Posted: <?php echo $datetime3; ?></p>
                                 </div>
                             </div>
+                            <?php 
+                                }
+                            ?>
                         </div>
                     </div>
                 </div>
@@ -354,7 +417,7 @@
                     <div class="col-12">
                         <div class="card text-center">
                             <div class="card-body">
-                                <a href="" class="link-dark" style="font-size: 1vw;">Read more blogs...</a>
+                                <a href="user/userdisplay-blog.php" class="link-dark" style="font-size: 1vw;">Read more blogs...</a>
                             </div>
                         </div>
                     </div>
@@ -403,21 +466,21 @@
                                     <h5 class="fw-bold"><i class="bi bi-chat-dots-fill"></i> Get in touch</h5>
                                 </div>
                                 <div class="card-body">
-                                    <form>
+                                    <form action="php/feedback.php" method="GET">
                                         <div class="mb-2">
                                             <label for="name" class="form-label" style="font-size: 1vw;"><i class="bi bi-person"></i> Name</label>
-                                            <input type="text" class="form-control" id="name">
+                                            <input type="text" name="name" class="form-control" id="name">
                                         </div>
                                         <div class="mb-2">
                                             <label for="email" class="form-label" style="font-size: 1vw;"><i class="bi bi-envelope-at"></i> Email</label>
-                                            <input type="email" class="form-control" id="email" aria-describedby="emailHelp">
+                                            <input type="email" class="form-control" name="email" id="email" aria-describedby="emailHelp">
                                             <div id="emailHelp" class="form-text" style="font-size: 1vw;">We'll never share your email with anyone else.</div>
                                         </div>
                                         <div class="mb-3">
                                             <label for="message" class="form-label" style="font-size: 1vw;"><i class="bi bi-chat-dots"></i> Message</label>
-                                            <textarea class="form-control" id="message" rows="2"></textarea>
+                                            <textarea class="form-control" name="message" id="message" rows="2"></textarea>
                                         </div>
-                                        <button type="submit" class="btn btn-dark" style="width: 100%; font-size: 1vw;"><i class="bi bi-send"></i> Submit</button>
+                                        <button type="submit" name="submit_message" class="btn btn-dark" style="width: 100%; font-size: 1vw;"><i class="bi bi-send"></i> Submit</button>
                                     </form>
                                 </div>
                             </div>
@@ -426,6 +489,12 @@
                 </div>
             </div>
         </section>
+        <?php 
+            if(!empty($_GET['message'])) {
+                $message = $_GET['message'];
+                echo "<script>alert('$message')</script>";
+            }
+        ?>
     </main>
     <footer class="bg-dark text-light d-flex justify-content-center align-items-center">
         <p>© <a href="login.php" target="_blank" class=" text-decoration-none text-light">Juriel Comia</a>. All Rights Reserved</p>

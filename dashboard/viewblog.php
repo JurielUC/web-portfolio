@@ -121,7 +121,7 @@
                 </div>
             </section>
             <!--Second Section to display blogs-->
-            <section id="blogs" class="mt-2 overflow-auto d-flex justify-content-center" style="height: 74vh;">
+            <section id="blogs" class="mt-2 d-flex justify-content-center" style="height: 74vh;">
                 <div class="row g-1" style="width: 50%">
                     <div class="col-12">
                         <div class="card">
@@ -136,7 +136,7 @@
                             <div class="card-body">
                                 <h5 class="card-title"><?php echo $title; ?></h5>
                                 <p class="text-muted m-1" style="font-size: .8rem;">Date Posted: <?php echo $datetime; ?></p>
-                                <p class="sentence" style="font-size: 1.1rem;  line-height: 2; text-align: justify;"><?php echo $blog; ?></p>
+                                <textarea class="sentence" style="font-size: 1.1rem; border: none; width: 100%; height: 60vh;  line-height: 2; text-align: justify;" readonly><?php echo $blog; ?></textarea>
                             </div>
                         </div>
                     </div>

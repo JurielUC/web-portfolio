@@ -1,4 +1,9 @@
+
 <?php
+
+    //password: 3a2zE!GVB>J
+    //username: u248663554_dbmywebsite
+    //database: u248663554_db_mywebsite
     $servername = "localhost";
     $username = "root";
     $password = "";
