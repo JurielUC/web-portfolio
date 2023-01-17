@@ -245,7 +245,7 @@
                                 <h3>Photo Editing</h3>
                             </div>
                             <div class="card-footer">
-                                <a href="user/project-list.php" class="btn btn-dark w-50" style="font-size: 1vw;"><i class="bi bi-binoculars-fill"></i> View</a>
+                                <a href="user/project-list.php#pe-tab-pane" class="btn btn-dark w-50" style="font-size: 1vw;"><i class="bi bi-binoculars-fill"></i> View</a>
                             </div>
                         </div>
                     </div>
@@ -256,7 +256,7 @@
                                 <h3>Video Editing</h3>
                             </div>
                             <div class="card-footer">
-                                <a href="user/project-list.php" class="btn btn-dark w-50" style="font-size: 1vw;"><i class="bi bi-binoculars-fill"></i> View</a>
+                                <a href="user/project-list.php#ve-tab-pane" class="btn btn-dark w-50" style="font-size: 1vw;"><i class="bi bi-binoculars-fill"></i> View</a>
                             </div>
                         </div>
                     </div>
@@ -267,7 +267,7 @@
                                 <h3>Web Dev Projects</h3>
                             </div>
                             <div class="card-footer">
-                                <a href="user/project-list.php" class="btn btn-dark w-50" style="font-size: 1vw;"><i class="bi bi-binoculars-fill"></i> View</a>
+                                <a href="user/project-list.php#wdp-tab-pane" class="btn btn-dark w-50" style="font-size: 1vw;"><i class="bi bi-binoculars-fill"></i> View</a>
                             </div>
                         </div>
                     </div>

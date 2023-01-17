@@ -89,14 +89,66 @@
                 </div>
             </div>
             <div class="row mt-3">
-                <div class="col-sm-4 border text-center">
-                    <a href="" class="p-2 text-decoration-none text-dark"><i class="bi bi-image-fill"></i> Photo Editing</a>
+                <div class="col-sm-12">
+                <ul class="nav nav-tabs" id="myTab" role="tablist">
+                    <li class="nav-item" role="presentation">
+                        <button class="nav-link text-dark active" id="pe-tab" data-bs-toggle="tab" data-bs-target="#pe-tab-pane" type="button" role="tab" aria-controls="pe-tab-pane" aria-selected="true">Photo Editing</button>
+                    </li>
+                    <li class="nav-item" role="presentation">
+                        <button class="nav-link text-dark" id="ve-tab" data-bs-toggle="tab" data-bs-target="#ve-tab-pane" type="button" role="tab" aria-controls="ve-tab-pane" aria-selected="false">Video Editing</button>
+                    </li>
+                    <li class="nav-item" role="presentation">
+                        <button class="nav-link text-dark" id="wdp-tab" data-bs-toggle="tab" data-bs-target="#wdp-tab-pane" type="button" role="tab" aria-controls="wdp-tab-pane" aria-selected="false">Web Dev Projects</button>
+                    </li>
+                </ul>
+
+                <div class="tab-content m-3" id="myTabContent">
+                    <!--For Photo Editing-->
+                    <div class="tab-pane fade show active" id="pe-tab-pane" role="tabpanel" aria-labelledby="pe-tab" tabindex="0">
+                        <div class="row">
+                            <div class="col-3">
+                                <div class="card" style="width: 18rem;">
+                                    <img src="../image/projects/ig1.jpg" class="card-img-top" alt="...">
+                                    <div class="card-body">
+                                        <h5 class="card-title">Webinar Advertisement Layout</h5>
+                                        <p class="card-text">This layout is a school project only.</p>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="col-3">
+                                <div class="card" style="width: 18rem;">
+                                    <img src="../image/projects/ig2.jpg" class="card-img-top" alt="...">
+                                    <div class="card-body">
+                                        <h5 class="card-title">Leaflets Layout</h5>
+                                        <p class="card-text">This layout is a school project only.</p>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="col-3">
+                                <div class="card" style="width: 18rem;">
+                                    <img src="../image/projects/ig3.jpg" class="card-img-top" alt="...">
+                                    <div class="card-body">
+                                        <h5 class="card-title">Layout for Product Advertisement</h5>
+                                        <p class="card-text">This layout is for social media used.</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!--For Video Editing-->
+                    <div class="tab-pane fade" id="ve-tab-pane" role="tabpanel" aria-labelledby="ve-tab" tabindex="0">
+
+                    </div>
+
+                    <!--For Web Development Projects-->
+                    <div class="tab-pane fade" id="wdp-tab-pane" role="tabpanel" aria-labelledby="wdp-tab" tabindex="0">
+
+                    </div>
                 </div>
-                <div class="col-sm-4 border text-center">
-                    <a href="" class="p-2 text-decoration-none text-dark"><i class="bi bi-camera-reels-fill"></i> Video Editing</a>
-                </div>
-                <div class="col-sm-4 border text-center">
-                    <a href="" class="p-2 text-decoration-none text-dark"><i class="bi bi-file-code-fill"></i> Web Development</a>
+
                 </div>
             </div>
         </div>
