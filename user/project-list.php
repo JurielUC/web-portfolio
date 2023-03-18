@@ -8,7 +8,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Projects</title>
-    <link rel="shortcut icon" href="../image/tab-img.png" type="image/x-icon">
+    <link rel="shortcut icon" href="../image/white.png" type="image/x-icon">
     <link rel="stylesheet" href="../node_modules/bootstrap/dist/css/bootstrap.css">
     <link rel="stylesheet" href="../custom-style/style.css?v=<?php echo time(); ?>">
     <link rel="stylesheet" href="../custom-style/loading.css?v=<?php echo time(); ?>">
@@ -31,7 +31,7 @@
     <header class="container-fluid bg-dark sticky-top" style="height: 70px;">
         <div class="navi row container-fluid h-100 text-white d-flex align-items-center">
             <div class="col-12">
-                <h3 class="head-name ms-4 fw-bold"><i class="bi bi-code-slash"></i> My Website</h3>
+                <h3 class="head-name ms-4 fw-bold"><img src="../image/white.png" width="25px" alt=""> My Website</h3>
             </div>
         </div>
     </header>
