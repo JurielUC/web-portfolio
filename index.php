@@ -73,7 +73,7 @@
                                 <p class="display-3">I'm <span class="fw-bold">Juriel.</span></p>
                             </div>
                             <p>This is <b>Juriel Comia</b> graphic designer and web developer located in Lemery, Batangas.</p>
-                            <a href="https://drive.google.com/file/d/1uGq6QPkyHsfVd-bbWyetUu3hgpRNAJx3/view?usp=sharing" target="_blank" class="btn btn-dark">Download CV <i class="bi bi-cloud-arrow-down"></i></a>
+                            <a href="https://drive.google.com/file/d/1BC7FuuSanaAx0FWJ7_FH-jc5EsqmmuII/view?usp=drive_link" target="_blank" class="btn btn-dark"> View Resume <i class="bi bi-cloud-arrow-down"></i></a>
                         </div>
                     </div>
                     <div class="col-6 d-flex align-items-end">
@@ -95,12 +95,13 @@
                             <h4 class="fw-bold"><i class="bi bi-file-person-fill"></i> About</h4>
                         </div>
                         <div class="card-body">
-                            <p style="text-align: justify; line-height: 2;">&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp Hello, and thank you for visiting my online portfolio. I'm 
-                                Juriel, aspiring Web Developer and Graphic Designer from 
-                                Lemery, Batangas. At Batangas State University - The National 
-                                Engineering University, I'm now pursuing a Bachelor of Science 
-                                in Information Technology with specialization of Service 
-                                Management.
+                            <p style="text-align: justify; line-height: 2;">&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp Hello, and thank you for visiting my online portfolio. 
+                            I'm Juriel, a Web Developer and Graphic Designer from Lemery, Batangas. At Batangas State University - 
+                            The National Engineering University, I graduated with a Bachelor of Science in Information Technology 
+                            with a specialization in Service Management. I am seeking an opportunity where I can utilize my knowledge 
+                            and skills to make a meaningful contribution to the organization. I am eager to learn new skills and gain 
+                            valuable experience while contributing to the growth of the company.
+
                             </p>
                         </div>
                     </div>
@@ -291,127 +292,36 @@
                 <div class="row">
                     <div class="col-12">
                         <div class="card-group">
-                            <?php 
-                                include_once 'php/dbconnect.php';
-
-                                $query = "SELECT * FROM tb_blogs WHERE blog_id = '964453033'";
-                                $result = mysqli_query($conn, $query);
-
-                                while ($row = mysqli_fetch_assoc($result))
-                                {
-                                    $category=$row['category'];
-                                    $title=$row['title'];
-                                    $blog=$row['blog'];
-                                    $datetime=$row['datetime'];
-                                    $uni_id=$row['blog_id'];
-
-                                    // strip tags to avoid breaking any html
-                                    $string = strip_tags($blog);
-                                    if (strlen($string) > 130) {
-
-                                        // truncate string
-                                        $stringCut = substr($string, 0, 140);
-                                        $endPoint = strrpos($stringCut, ' ');
-
-                                        //if the string doesn't contain any space then it will cut without word basis.
-                                        $string = $endPoint? substr($stringCut, 0, $endPoint) : substr($stringCut, 0);
-                                        $string .= '...';
-                                    }
-                            ?>
                             <div class="card">
                                 <div class="card-header">
-                                    <h5><?php echo $category ?></h5>
+                                    <h5>Article, Web Development</h5>
                                 </div>
                                 <div class="card-body" style="text-align: justify;">
-                                    <h4 class="card-title"><?php echo $title; ?></h4>
-                                    <p style="font-size: 1vw;"><?php echo $string; ?></p>
-                                    <a style="font-size: 1vw;" href="user/userdisplay-blog-view.php?blog_id=<?php echo $uni_id; ?>" class="btn btn-dark"><i class="bi bi-book"></i> Continue Reading...</a>
-                                </div>
-                                <div class="card-footer text-center">
-                                    <p class="text-muted" style="font-size: 1vw;">Date Posted: <?php echo $datetime; ?></p>
+                                    <h4 class="card-title">7 Principles Of Designing A User-Friendly And Engaging UI In Web Development</h4>
+                                    <p style="font-size: 1vw;">User Interface (UI) plays a crucial role in web development as it is the first point of interaction between the user and the website...</p>
+                                    <a style="font-size: 1vw;" target="_blank" href="https://www.nucleiotechnologies.com/7-principles-of-designing-a-user-friendly-and-engaging-ui-in-web-development/" class="btn btn-dark"><i class="bi bi-book"></i> Continue Reading...</a>
                                 </div>
                             </div>
-                            <?php 
-                                }
-
-                                $query2 = "SELECT * FROM tb_blogs WHERE blog_id = '338158280'";
-                                $result2 = mysqli_query($conn, $query2);
-
-                                while ($row2 = mysqli_fetch_assoc($result2)) {
-                                    $category2=$row2['category'];
-                                    $title2=$row2['title'];
-                                    $blog2=$row2['blog'];
-                                    $datetime2=$row2['datetime'];
-                                    $uni_id2=$row2['blog_id'];
-
-                                    // strip tags to avoid breaking any html
-                                    $string2 = strip_tags($blog2);
-                                    if (strlen($string2) > 130) {
-
-                                        // truncate string
-                                        $stringCut2 = substr($string2, 0, 140);
-                                        $endPoint2 = strrpos($stringCut2, ' ');
-
-                                        //if the string doesn't contain any space then it will cut without word basis.
-                                        $string2 = $endPoint2? substr($stringCut2, 0, $endPoint2) : substr($stringCut2, 0);
-                                        $string2 .= '...';
-                                    }
-                            ?>
                             <div class="card">
                                 <div class="card-header">
-                                    <h5><?php echo $category2 ?></h5>
+                                    <h5>Article, Web Design</h5>
                                 </div>
                                 <div class="card-body" style="text-align: justify;">
-                                    <h4 class="card-title"><?php echo $title2; ?></h4>
-                                    <p style="font-size: 1vw;"><?php echo $string2; ?></p>
-                                    <a style="font-size: 1vw;" href="user/userdisplay-blog-view.php?blog_id=<?php echo $uni_id2; ?>" class="btn btn-dark"><i class="bi bi-book"></i> Continue Reading...</a>
-                                </div>
-                                <div class="card-footer text-center">
-                                    <p class="text-muted" style="font-size: 1vw;">Date Posted: <?php echo $datetime2; ?></p>
+                                    <h4 class="card-title">Importance Of User Experience In Web Design</h4>
+                                    <p style="font-size: 1vw;">User experience (UX) is a crucial aspect of web design that can make or break the success of a website. In today’s digital age, where people rely heavily on the internet for information and services...</p>
+                                    <a style="font-size: 1vw;" target="_blank" href="https://www.nucleiotechnologies.com/importance-of-user-experience-in-web-design/" class="btn btn-dark"><i class="bi bi-book"></i> Continue Reading...</a>
                                 </div>
                             </div>
-                            <?php 
-                                }
-
-                                $query3 = "SELECT * FROM tb_blogs WHERE blog_id = '1029125450'";
-                                $result3 = mysqli_query($conn, $query3);
-
-                                while ($row3 = mysqli_fetch_assoc($result3)) {
-                                    $category3=$row3['category'];
-                                    $title3=$row3['title'];
-                                    $blog3=$row3['blog'];
-                                    $datetime3=$row3['datetime'];
-                                    $uni_id3=$row3['blog_id'];
-
-                                    // strip tags to avoid breaking any html
-                                    $string3 = strip_tags($blog3);
-                                    if (strlen($string3) > 130) {
-
-                                        // truncate string
-                                        $stringCut3 = substr($string3, 0, 140);
-                                        $endPoint3 = strrpos($stringCut3, ' ');
-
-                                        //if the string doesn't contain any space then it will cut without word basis.
-                                        $string3 = $endPoint3? substr($stringCut3, 0, $endPoint3) : substr($stringCut3, 0);
-                                        $string3 .= '...';
-                                    }
-                            ?>
                             <div class="card">
                                 <div class="card-header">
-                                    <h5><?php echo $category3 ?></h5>
+                                    <h5>MySQL, Python, Web Development</h5>
                                 </div>
                                 <div class="card-body" style="text-align: justify;">
-                                    <h4 class="card-title"><?php echo $title3; ?></h4>
-                                    <p style="font-size: 1vw;"><?php echo $string3; ?></p>
-                                    <a style="font-size: 1vw;" href="user/userdisplay-blog-view.php?blog_id=<?php echo $uni_id3; ?>" class="btn btn-dark"><i class="bi bi-book"></i> Continue Reading...</a>
-                                </div>
-                                <div class="card-footer text-center">
-                                    <p class="text-muted" style="font-size: 1vw;">Date Posted: <?php echo $datetime3; ?></p>
+                                    <h4 class="card-title">How To Build A Simple Python Flask Application With MySQL Database: Create, Delete, Update, And Display</h4>
+                                    <p style="font-size: 1vw;">In this tutorial, we will cover the basics of using Flask and MySQL together. Specifically, we will cover...</p>
+                                    <a style="font-size: 1vw;" target="_blank" href="https://www.nucleiotechnologies.com/how-to-build-a-simple-python-flask-application-with-mysql-database-add-delete-update-and-view/" class="btn btn-dark"><i class="bi bi-book"></i> Continue Reading...</a>
                                 </div>
                             </div>
-                            <?php 
-                                }
-                            ?>
                         </div>
                     </div>
                 </div>
@@ -419,7 +329,7 @@
                     <div class="col-12">
                         <div class="card text-center">
                             <div class="card-body">
-                                <a href="user/userdisplay-blog.php" class="link-dark" style="font-size: 1vw;">Read more blogs...</a>
+                                <a href="https://www.nucleiotechnologies.com/author/comiajuriel/" target="_blank" class="link-dark" style="font-size: 1vw;">Read more blogs...</a>
                             </div>
                         </div>
                     </div>
@@ -468,7 +378,7 @@
                                     <h5 class="fw-bold"><i class="bi bi-chat-dots-fill"></i> Get in touch</h5>
                                 </div>
                                 <div class="card-body">
-                                    <form action="php/feedback.php" method="GET">
+                                    <form action="mailer.php" method="POST">
                                         <div class="mb-2">
                                             <label for="name" class="form-label" style="font-size: 1vw;"><i class="bi bi-person"></i> Name</label>
                                             <input type="text" name="name" class="form-control" id="name">
@@ -482,7 +392,7 @@
                                             <label for="message" class="form-label" style="font-size: 1vw;"><i class="bi bi-chat-dots"></i> Message</label>
                                             <textarea class="form-control" name="message" id="message" rows="2"></textarea>
                                         </div>
-                                        <button type="submit" name="submit_message" class="btn btn-dark" style="width: 100%; font-size: 1vw;"><i class="bi bi-send"></i> Submit</button>
+                                        <button type="submit" class="btn btn-dark" style="width: 100%; font-size: 1vw;"><i class="bi bi-send"></i> Submit</button>
                                     </form>
                                 </div>
                             </div>
@@ -500,7 +410,7 @@
     </main>
     <footer>
         <div class="bg-dark text-light d-flex h-100 justify-content-center align-items-center">
-            <p>© <a href="login.php" target="_blank" class=" text-decoration-none text-light">Juriel Comia</a>. All Rights Reserved</p>
+            <p>© Juriel Comia. All Rights Reserved</p>
         </div>
     </footer>
     <div class="not-pc" style="height: 90vh; width: 100%;">

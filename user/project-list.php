@@ -105,37 +105,7 @@
                 <div class="tab-content m-3" id="myTabContent">
                     <!--For Photo Editing-->
                     <div class="tab-pane fade show active" id="pe-tab-pane" role="tabpanel" aria-labelledby="pe-tab" tabindex="0">
-                        <div class="row">
-                            <div class="col-3">
-                                <div class="card" style="width: 18rem;">
-                                    <img src="../image/projects/ig1.jpg" class="card-img-top" alt="...">
-                                    <div class="card-body">
-                                        <h5 class="card-title">Webinar Advertisement Layout</h5>
-                                        <p class="card-text">This layout is a school project only.</p>
-                                    </div>
-                                </div>
-                            </div>
-
-                            <div class="col-3">
-                                <div class="card" style="width: 18rem;">
-                                    <img src="../image/projects/ig2.jpg" class="card-img-top" alt="...">
-                                    <div class="card-body">
-                                        <h5 class="card-title">Leaflets Layout</h5>
-                                        <p class="card-text">This layout is a school project only.</p>
-                                    </div>
-                                </div>
-                            </div>
-
-                            <div class="col-3">
-                                <div class="card" style="width: 18rem;">
-                                    <img src="../image/projects/ig3.jpg" class="card-img-top" alt="...">
-                                    <div class="card-body">
-                                        <h5 class="card-title">Layout for Product Advertisement</h5>
-                                        <p class="card-text">This layout is for social media used.</p>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
+            
                     </div>
 
                     <!--For Video Editing-->

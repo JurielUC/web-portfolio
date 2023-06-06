@@ -26,16 +26,7 @@ body {
   border-right: 1px solid black; /* The typwriter cursor */
   white-space: nowrap; /* Keeps the content on a single line */
   margin: 0 0; /* Gives that scrolling effect as the typing happens */
-  -webkit-animation: typing 3.5s steps(30, start), blink-caret 0.5s step-end infinite;
-          animation: typing 3.5s steps(30, start), blink-caret 0.5s step-end infinite;
-}
-@-webkit-keyframes typing {
-  from {
-    width: 0;
-  }
-  to {
-    width: 100%;
-  }
+  animation: typing 3.5s steps(30, start), blink-caret 0.5s step-end infinite;
 }
 @keyframes typing {
   from {
@@ -43,14 +34,6 @@ body {
   }
   to {
     width: 100%;
-  }
-}
-@-webkit-keyframes blink-caret {
-  from, to {
-    border-color: transparent;
-  }
-  50% {
-    border-color: #000000;
   }
 }
 @keyframes blink-caret {
